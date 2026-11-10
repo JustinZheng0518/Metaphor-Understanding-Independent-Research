@@ -1,3 +1,17 @@
+# Metaphor Understanding — VUA Verb Classification
+
+> **Experiment log (2026-11-10).** The numbers below are recorded results on the **original Gao-style formatted VUA files as read by the experiment scripts**, which contain mixed text encodings and known mojibake. These runs are retained for traceability, **not presented as clean-data or publication-ready scores**. Corrected-text replication is pending.
+
+### Data and evaluation protocol
+
+- Original project split: **15,516 Train / 1,724 Dev / 5,873 Test**; label 1 = metaphor, label 0 = literal.
+- The Gao-style formatted CSV files are not uniformly UTF-8. A number of examples contain pre-existing garbled punctuation; some scripts additionally read them using `latin1`. This permits tokenization and training but may change model inputs.
+- A prior split audit also reported repeated examples and overlap across some split identifiers; preserve original split for reproduction, but acknowledge limitations in generalization claims.
+- The BERT/RoBERTa results below come from **one run per model (seed 42)**. Models were chosen by Dev F1; Test was evaluated once after selection. Do not tune on Test errors.
+- Do **not** compare these results to newly cleaned data without recording a new dataset version, rechecking target-word alignment, and rerunning training and evaluation.
+
+---
+
 ## Baseline Results
 
 The following experiments establish a progression from simple non-contextual baselines to contextual neural models on the VUA verb-classification task.
@@ -9,6 +23,8 @@ The following experiments establish a progression from simple non-contextual bas
 | Gao 2018 Lexical | 0.765 | 0.679 | 0.407 | 0.509 |
 | BiLSTM + GloVe + Target Indicator | 0.7572 | 0.6139 | 0.5128 | 0.5588 |
 | BiLSTM + GloVe + ELMo + Target Indicator | 0.8027 | 0.6783 | 0.6502 | 0.6640 |
+| BERT-base + Target Mean Pooling | 0.8435 | 0.7638 | 0.6922 | 0.7262 |
+| RoBERTa-base + Target Mean Pooling | 0.8578 | 0.8038 | 0.6956 | 0.7458 |
 
 ### Majority Baseline
 
@@ -115,7 +131,7 @@ The GloVe BiLSTM introduces sentence context and improves over the Gao lexical b
 
 Adding ELMo produces a substantially larger improvement, supporting the importance of contextualized word representations for metaphor identification.
 
-These experiments establish the historical baseline for the next stage of the project, which will investigate Transformer-based representations such as BERT and RoBERTa.
+These experiments establish the historical baseline for the Transformer-based BERT and RoBERTa results recorded below.
 
 ### Reproduction Pipeline
 
@@ -132,6 +148,43 @@ The main experiment outputs are stored in the `results/` directory:
 - `gao2018_bilstm_no_elmo_test.csv`
 - `gao2018_bilstm_elmo_history.csv`
 - `gao2018_bilstm_elmo_test.csv`
-- `baseline_results.csv`
+- `baseline_results.csv` — consolidated legacy-format VUA test results
+- `vua_seen_unseen_comparison.csv` — Experiment 12.1 subgroup metrics
+- `vua_unseen_error_agreement.csv` — Experiment 12.2 agreement counts
 
 Large pretrained embeddings and model checkpoints are excluded from version control through `.gitignore`.
+
+---
+
+## Transformer Baselines — Experiments 10 and 11
+
+Both models fine-tune the entire pretrained encoder, mean-pool the target verb's subword hidden states from the final layer, and apply dropout plus a 2-way linear classifier. Configuration: 256-token maximum, batch size 16, learning rate 2e-5, up to 4 epochs, seed 42, checkpoint selected by **Dev F1**. These are historical results on the original formatted dataset, **not encoding-repaired runs**.
+
+| Model | Best epoch | Best Dev F1 | Test Accuracy | Test Precision | Test Recall | Test F1 |
+|---|---:|---:|---:|---:|---:|---:|
+| BERT-base (target mean) | 3 | 0.7544 | 0.8435 | 0.7638 | 0.6922 | 0.7262 |
+| RoBERTa-base (target mean) | 4 | 0.7586 | 0.8578 | 0.8038 | 0.6956 | 0.7458 |
+
+BERT Test confusion matrix: TN=3,735, FP=377, FN=542, TP=1,219. RoBERTa Test confusion matrix: TN=3,813, FP=299, FN=536, TP=1,225. The Test set contains 5,873 examples (1,761 metaphors). Differences are **descriptive**, not significance-tested or averaged across seeds.
+
+The local experiment scripts produced `results/bert_base_targetmean_test_metrics.json`, `results/roberta_base_targetmean_test_metrics.json`, and per-example prediction CSVs. The committed aggregate scores in `results/baseline_results.csv` are transcribed from the verified run logs; local model checkpoints and per-example files are not part of this commit.
+
+## Seen vs Unseen Verb Analysis — Experiment 12
+
+Seen/unseen membership is based on case-normalized, whitespace-stripped **target verb lemma** in Train. Of 5,873 Test examples, 5,546 are seen and 327 are unseen (256 unique unseen lemmas). This is an observational subgroup analysis on the original split, not an independent held-out-verb training protocol.
+
+| Model | Group | Samples | Metaphors | Precision | Recall | F1 |
+|---|---|---:|---:|---:|---:|---:|
+| BERT | Seen | 5,546 | 1,660 | 0.7803 | 0.6952 | 0.7353 |
+| BERT | Unseen | 327 | 101 | 0.5556 | 0.6436 | 0.5963 |
+| RoBERTa | Seen | 5,546 | 1,660 | 0.8141 | 0.7018 | 0.7538 |
+| RoBERTa | Unseen | 327 | 101 | 0.6452 | 0.5941 | 0.6186 |
+
+Unseen agreement (327 examples): both correct **217**, both wrong **52**, BERT-only correct **22**, RoBERTa-only correct **36**. Unseen confusion matrix: BERT TN=174, FP=52, FN=36, TP=65; RoBERTa TN=193, FP=33, FN=41, TP=60. These observations are exploratory; Test errors must not drive subsequent hyperparameter selection.
+
+## Data Quality / Next Steps
+
+- **Known encoding issue:** existing Gao-style VUA CSV files contain mixed encoding and mojibake (including corrupted punctuation in VUA Test). Re-downloading the same Gao data bundle does not repair the text. Do not overwrite original data or historical checkpoints.
+- A separate MelBERT data package also includes some garbled VUA-Verb text; its VUA-20 material may differ in formatting, target definitions, and splits. It is **not** a drop-in replacement without row-level verification.
+- Before reporting publication results: establish a versioned, corrected source with provenance; verify `sentence`, `verb_idx`, `verb`, labels and split identity; rerun BERT/RoBERTa with consistent UTF-8 handling; report corrected runs separately. Keep Gao-reproduction legacy results for reference.
+- All original historical experiment CSVs are preserved. No model training, checkpoint changes, or data corrections are made by this documentation update.
