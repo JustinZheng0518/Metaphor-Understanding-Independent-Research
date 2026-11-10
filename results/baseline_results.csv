@@ -1,6 +1,8 @@
 model,dataset,split,accuracy,precision,recall,f1,notes
-majority,VUA,test,0.700153,0.000000,0.000000,0.000000,"always predicts literal"
-lexical_train_only,VUA,test,0.764005,0.664908,0.429302,0.521739,"train split only; >=0.5; unseen verbs literal"
-gao2018_lexical,VUA,test,0.764516,0.678977,0.407155,0.509052,"strict Gao et al. 2018 reproduction; train+val; >0.5; unseen verbs literal"
-
-Gao2018_BiLSTM_GloVe_NoELMo,0.7572,0.6139,0.5128,0.5588,19
+majority,VUA,test,0.700153,0.000000,0.000000,0.000000,"always predicts literal; original Gao-style formatted VUA"
+lexical_train_only,VUA,test,0.764005,0.664908,0.429302,0.521739,"train split only; >=0.5; unseen verbs literal; original formatted VUA"
+gao2018_lexical,VUA,test,0.764516,0.678977,0.407155,0.509052,"train+val; >0.5; unseen verbs literal; Gao-style protocol"
+gao2018_bilstm_glove,VUA,test,0.7571939383619956,0.6138681169272604,0.5127768313458262,0.5587871287128713,"Experiment 05; best epoch 19; original formatted VUA"
+gao2018_bilstm_glove_elmo,VUA,test,0.8026562233951984,0.6783175355450237,0.6501987507098239,0.6639605682806611,"Experiment 07; best epoch 16; original formatted VUA"
+bert_base_targetmean,VUA,test,0.8435211987059424,0.7637844611528822,0.6922203293583191,0.7262436699434018,"Experiment 10; best dev epoch 3; seed 42; original formatted VUA"
+roberta_base_targetmean,VUA,test,0.8578239400647029,0.8038057742782152,0.6956274843838728,0.745814307458143,"Experiment 11; best dev epoch 4; seed 42; original formatted VUA"
