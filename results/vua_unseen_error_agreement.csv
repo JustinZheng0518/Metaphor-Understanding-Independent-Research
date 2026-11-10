@@ -1,0 +1,5 @@
+case,samples,gold_literal,gold_metaphor
+both_correct,217,166,51
+bert_only,22,8,14
+roberta_only,36,27,9
+both_wrong,52,25,27
