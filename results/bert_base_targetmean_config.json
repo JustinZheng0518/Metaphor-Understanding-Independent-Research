@@ -1,0 +1,34 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{
+  "experiment": "10.2",
+  "model": "bert-base-uncased",
+  "seed": 42,
+  "max_length": 256,
+  "batch_size": 16,
+  "epochs_max": 4,
+  "learning_rate": 2e-05,
+  "weight_decay": 0.01,
+  "warmup_ratio": 0.1,
+  "pooling": "target_subword_mean",
+  "train_file": "data\\VUA\\VUA_formatted_train.csv",
+  "dev_file": "data\\VUA\\VUA_formatted_val.csv",
+  "train_sha256": "d37be3981be1660a80ffd12d945cbfaf5d956e43e620a4adbadcb105a47ed33e",
+  "dev_sha256": "1a1b54ad56ebd115057b3427a574fd211fe9238a41dfa61440020e46ce8aae99",
+  "torch_version": "2.14.1+cu130",
+  "transformers_version": "5.19.0",
+  "note": "Original VUA split. Test not evaluated."
+}
