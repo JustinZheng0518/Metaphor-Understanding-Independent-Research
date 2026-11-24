@@ -1,0 +1,25 @@
+{
+  "seed": 42,
+  "group_by": "sentence",
+  "official_train_rows": 17240,
+  "removed_train_test_sentence_overlap": 77,
+  "removed_train_duplicates": 46,
+  "removed_train_conflicting_labels": 0,
+  "splits": {
+    "train": {
+      "rows": 15404,
+      "literal": 11075,
+      "metaphor": 4329
+    },
+    "dev": {
+      "rows": 1713,
+      "literal": 1261,
+      "metaphor": 452
+    },
+    "test": {
+      "rows": 5873,
+      "literal": 4112,
+      "metaphor": 1761
+    }
+  }
+}

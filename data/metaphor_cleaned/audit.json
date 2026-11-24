@@ -1,0 +1,569 @@
+{
+  "seed": 42,
+  "group_by": "sentence",
+  "datasets": {
+    "TroFi": {
+      "source_rows": 3737,
+      "repairs": [
+        {
+          "record": 293,
+          "verb": "drink",
+          "old_index": 1,
+          "new_index": 7
+        },
+        {
+          "record": 301,
+          "verb": "drink",
+          "old_index": 4,
+          "new_index": 18
+        },
+        {
+          "record": 999,
+          "verb": "lend",
+          "old_index": 1,
+          "new_index": 15
+        },
+        {
+          "record": 1298,
+          "verb": "rest",
+          "old_index": 18,
+          "new_index": 34
+        },
+        {
+          "record": 1327,
+          "verb": "ride",
+          "old_index": 5,
+          "new_index": 22
+        },
+        {
+          "record": 1385,
+          "verb": "roll",
+          "old_index": 11,
+          "new_index": 28
+        },
+        {
+          "record": 1393,
+          "verb": "roll",
+          "old_index": 3,
+          "new_index": 31
+        },
+        {
+          "record": 1527,
+          "verb": "strike",
+          "old_index": 3,
+          "new_index": 11
+        },
+        {
+          "record": 3042,
+          "verb": "ride",
+          "old_index": 8,
+          "new_index": 15
+        },
+        {
+          "record": 3046,
+          "verb": "ride",
+          "old_index": 4,
+          "new_index": 22
+        },
+        {
+          "record": 3050,
+          "verb": "ride",
+          "old_index": 4,
+          "new_index": 9
+        },
+        {
+          "record": 3053,
+          "verb": "ride",
+          "old_index": 4,
+          "new_index": 8
+        },
+        {
+          "record": 3074,
+          "verb": "ride",
+          "old_index": 6,
+          "new_index": 20
+        },
+        {
+          "record": 3075,
+          "verb": "ride",
+          "old_index": 8,
+          "new_index": 11
+        },
+        {
+          "record": 3352,
+          "verb": "stick",
+          "old_index": 6,
+          "new_index": 17
+        },
+        {
+          "record": 3564,
+          "verb": "target",
+          "old_index": 7,
+          "new_index": 23
+        },
+        {
+          "record": 3698,
+          "verb": "touch",
+          "old_index": 3,
+          "new_index": 10
+        }
+      ],
+      "removed": [
+        {
+          "record": 46,
+          "reason": "duplicate_target"
+        },
+        {
+          "record": 112,
+          "reason": "duplicate_target"
+        },
+        {
+          "record": 113,
+          "reason": "duplicate_target"
+        },
+        {
+          "record": 115,
+          "reason": "duplicate_target"
+        },
+        {
+          "record": 120,
+          "reason": "duplicate_target"
+        },
+        {
+          "record": 169,
+          "reason": "duplicate_target"
+        },
+        {
+          "record": 247,
+          "reason": "duplicate_target"
+        },
+        {
+          "record": 257,
+          "reason": "duplicate_target"
+        },
+        {
+          "record": 288,
+          "reason": "duplicate_target"
+        },
+        {
+          "record": 327,
+          "reason": "duplicate_target"
+        },
+        {
+          "record": 328,
+          "reason": "duplicate_target"
+        },
+        {
+          "record": 425,
+          "reason": "duplicate_target"
+        },
+        {
+          "record": 616,
+          "reason": "duplicate_target"
+        },
+        {
+          "record": 620,
+          "reason": "duplicate_target"
+        },
+        {
+          "record": 685,
+          "reason": "duplicate_target"
+        },
+        {
+          "record": 687,
+          "reason": "duplicate_target"
+        },
+        {
+          "record": 717,
+          "reason": "duplicate_target"
+        },
+        {
+          "record": 719,
+          "reason": "duplicate_target"
+        },
+        {
+          "record": 722,
+          "reason": "duplicate_target"
+        },
+        {
+          "record": 723,
+          "reason": "duplicate_target"
+        },
+        {
+          "record": 728,
+          "reason": "duplicate_target"
+        },
+        {
+          "record": 729,
+          "reason": "duplicate_target"
+        },
+        {
+          "record": 730,
+          "reason": "duplicate_target"
+        },
+        {
+          "record": 733,
+          "reason": "duplicate_target"
+        },
+        {
+          "record": 736,
+          "reason": "duplicate_target"
+        },
+        {
+          "record": 740,
+          "reason": "duplicate_target"
+        },
+        {
+          "record": 741,
+          "reason": "duplicate_target"
+        },
+        {
+          "record": 742,
+          "reason": "duplicate_target"
+        },
+        {
+          "record": 743,
+          "reason": "duplicate_target"
+        },
+        {
+          "record": 747,
+          "reason": "duplicate_target"
+        },
+        {
+          "record": 715,
+          "reason": "duplicate_target"
+        },
+        {
+          "record": 882,
+          "reason": "duplicate_target"
+        },
+        {
+          "record": 928,
+          "reason": "duplicate_target"
+        },
+        {
+          "record": 992,
+          "reason": "duplicate_target"
+        },
+        {
+          "record": 993,
+          "reason": "duplicate_target"
+        },
+        {
+          "record": 1005,
+          "reason": "duplicate_target"
+        },
+        {
+          "record": 1057,
+          "reason": "duplicate_target"
+        },
+        {
+          "record": 1172,
+          "reason": "duplicate_target"
+        },
+        {
+          "record": 1174,
+          "reason": "duplicate_target"
+        },
+        {
+          "record": 1210,
+          "reason": "duplicate_target"
+        },
+        {
+          "record": 2899,
+          "reason": "duplicate_target"
+        },
+        {
+          "record": 1225,
+          "reason": "duplicate_target"
+        },
+        {
+          "record": 1294,
+          "reason": "duplicate_target"
+        },
+        {
+          "record": 1301,
+          "reason": "duplicate_target"
+        },
+        {
+          "record": 1367,
+          "reason": "duplicate_target"
+        },
+        {
+          "record": 1419,
+          "reason": "duplicate_target"
+        },
+        {
+          "record": 1421,
+          "reason": "duplicate_target"
+        },
+        {
+          "record": 1526,
+          "reason": "duplicate_target"
+        },
+        {
+          "record": 1669,
+          "reason": "duplicate_target"
+        },
+        {
+          "record": 1673,
+          "reason": "duplicate_target"
+        },
+        {
+          "record": 1674,
+          "reason": "duplicate_target"
+        },
+        {
+          "record": 1703,
+          "reason": "duplicate_target"
+        },
+        {
+          "record": 1772,
+          "reason": "duplicate_target"
+        },
+        {
+          "record": 1907,
+          "reason": "duplicate_target"
+        },
+        {
+          "record": 1934,
+          "reason": "duplicate_target"
+        },
+        {
+          "record": 2019,
+          "reason": "duplicate_target"
+        },
+        {
+          "record": 2021,
+          "reason": "duplicate_target"
+        },
+        {
+          "record": 2181,
+          "reason": "duplicate_target"
+        },
+        {
+          "record": 2182,
+          "reason": "duplicate_target"
+        },
+        {
+          "record": 2183,
+          "reason": "duplicate_target"
+        },
+        {
+          "record": 2228,
+          "reason": "duplicate_target"
+        },
+        {
+          "record": 2234,
+          "reason": "duplicate_target"
+        },
+        {
+          "record": 2250,
+          "reason": "duplicate_target"
+        },
+        {
+          "record": 2351,
+          "reason": "duplicate_target"
+        },
+        {
+          "record": 2398,
+          "reason": "duplicate_target"
+        },
+        {
+          "record": 2399,
+          "reason": "duplicate_target"
+        },
+        {
+          "record": 2400,
+          "reason": "duplicate_target"
+        },
+        {
+          "record": 2449,
+          "reason": "duplicate_target"
+        },
+        {
+          "record": 2451,
+          "reason": "duplicate_target"
+        },
+        {
+          "record": 2452,
+          "reason": "duplicate_target"
+        },
+        {
+          "record": 2674,
+          "reason": "duplicate_target"
+        },
+        {
+          "record": 2739,
+          "reason": "duplicate_target"
+        },
+        {
+          "record": 2825,
+          "reason": "duplicate_target"
+        },
+        {
+          "record": 2872,
+          "reason": "duplicate_target"
+        },
+        {
+          "record": 2873,
+          "reason": "duplicate_target"
+        },
+        {
+          "record": 2876,
+          "reason": "duplicate_target"
+        },
+        {
+          "record": 2878,
+          "reason": "duplicate_target"
+        },
+        {
+          "record": 2968,
+          "reason": "duplicate_target"
+        },
+        {
+          "record": 2971,
+          "reason": "duplicate_target"
+        },
+        {
+          "record": 3168,
+          "reason": "duplicate_target"
+        },
+        {
+          "record": 3361,
+          "reason": "duplicate_target"
+        },
+        {
+          "record": 3370,
+          "reason": "duplicate_target"
+        },
+        {
+          "record": 3432,
+          "reason": "duplicate_target"
+        },
+        {
+          "record": 3496,
+          "reason": "duplicate_target"
+        },
+        {
+          "record": 3507,
+          "reason": "duplicate_target"
+        },
+        {
+          "record": 3630,
+          "reason": "duplicate_target"
+        },
+        {
+          "record": 3637,
+          "reason": "duplicate_target"
+        },
+        {
+          "record": 3666,
+          "reason": "duplicate_target"
+        },
+        {
+          "record": 3701,
+          "reason": "duplicate_target"
+        },
+        {
+          "record": 3711,
+          "reason": "duplicate_target"
+        },
+        {
+          "record": 3734,
+          "reason": "duplicate_target"
+        },
+        {
+          "record": 3735,
+          "reason": "duplicate_target"
+        },
+        {
+          "record": 3736,
+          "reason": "duplicate_target"
+        },
+        {
+          "record": 3738,
+          "reason": "duplicate_target"
+        },
+        {
+          "record": 3737,
+          "reason": "duplicate_target"
+        }
+      ],
+      "cleaned_rows": 3642,
+      "splits": {
+        "train": {
+          "rows": 2914,
+          "literal": 1632,
+          "metaphor": 1282
+        },
+        "dev": {
+          "rows": 364,
+          "literal": 204,
+          "metaphor": 160
+        },
+        "test": {
+          "rows": 364,
+          "literal": 204,
+          "metaphor": 160
+        }
+      }
+    },
+    "MOH-X": {
+      "source_rows": 647,
+      "repairs": [],
+      "removed": [
+        {
+          "record": 632,
+          "reason": "ambiguous_jam_jampacked_target"
+        },
+        {
+          "record": 79,
+          "reason": "duplicate_target"
+        },
+        {
+          "record": 350,
+          "reason": "duplicate_target"
+        },
+        {
+          "record": 375,
+          "reason": "duplicate_target"
+        },
+        {
+          "record": 400,
+          "reason": "duplicate_target"
+        },
+        {
+          "record": 503,
+          "reason": "duplicate_target"
+        },
+        {
+          "record": 602,
+          "reason": "conflicting_label"
+        },
+        {
+          "record": 603,
+          "reason": "conflicting_label"
+        }
+      ],
+      "cleaned_rows": 639,
+      "splits": {
+        "train": {
+          "rows": 511,
+          "literal": 261,
+          "metaphor": 250
+        },
+        "dev": {
+          "rows": 64,
+          "literal": 33,
+          "metaphor": 31
+        },
+        "test": {
+          "rows": 64,
+          "literal": 33,
+          "metaphor": 31
+        }
+      }
+    }
+  }
+}

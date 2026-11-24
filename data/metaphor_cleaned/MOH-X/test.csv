@@ -1,0 +1,65 @@
+verb,sentence,verb_idx,label
+fasten,This dress fastens in the back .,2,0
+radiate,She radiates happiness .,1,1
+crush,The car crushed the toy .,2,0
+revive,A hot soup will revive me .,4,1
+reflect,Sound is reflected well in this auditorium .,2,0
+square,one idea squares with the other one .,2,1
+digest,I can not digest milk products .,3,0
+sing,the kettle was singing .,3,1
+communicate,The rooms communicated .,2,1
+uproot,They plan to uproot the vine that has spread all over the garden .,3,0
+claw,The politician clawed his rival .,2,1
+stagger,She was staggered with bills after she tried to rebuild her house following the earthquake .,2,1
+ascend,The path ascended to the top of the hill .,2,0
+land,He landed several blows on his opponent 's head .,1,1
+recapture,The military forces managed to recapture the fort .,5,0
+flood,Our basement flooded during the heavy rains .,2,0
+fracture,These events could fracture the balance of power .,3,1
+explode,The champagne bottle exploded .,3,0
+revive,He revived this style of opera .,1,1
+glow,The coals were glowing in the dark .,3,0
+build,These architects build in interesting and new styles .,2,0
+seize,Fear seized the prisoners .,1,1
+crawl,The old cheese was crawling with maggots .,4,1
+juggle,the player juggled the ball .,2,0
+rotate,We rotate the crops so as to maximize the use of the soil .,1,1
+spell,How do you spell this word ?,3,0
+convulse,The muscles in her face convulsed .,5,0
+breathe,Our new synthetic fabric breathes and is perfect for summer wear .,4,1
+flap,The bird flapped its wings .,2,0
+absorb,Her interest in butterflies absorbs her completely .,4,1
+devour,he devoured three sandwiches .,1,0
+mold,The dress molds her beautiful figure .,2,1
+negociate,The parties negociated all night .,2,0
+engrave,The event engraved itself into her memory .,2,1
+trench,He trenched his military camp .,1,0
+shake,The bad news shook her hopes .,3,1
+smash,The motorcycle smashed into the guard rail .,2,0
+shower,He was showered with praise .,2,1
+computerize,Our office is fully computerized now .,4,0
+seize,the invaders seized the land and property of the inhabitants .,2,0
+swallow,I swallowed my anger and kept quiet .,1,1
+dash,He dashed the plate against the wall .,1,0
+taste,The ex - slave tasted freedom shortly before she died .,4,1
+crush,crush an aluminum can .,0,0
+swallow,She swallowed the last words of her speech .,1,1
+map,map the surface of Venus .,0,0
+neutralize,Her optimism neutralizes his gloom .,2,1
+blister,The Senator blistered the administration in his speech on Friday .,2,1
+accommodate,This hotel can accommodate 250 guests .,3,0
+lock,He was locked in a laughing fit .,2,1
+mount,They mounted the aerator on a floating .,1,0
+engrave,engrave the pen with the owner 's name .,0,0
+crush,She was crushed by his refusal of her invitation .,2,1
+spread,spread cheese on a piece of bread .,0,0
+inflate,inflate the currency .,0,1
+palpitate,His heart palpitated .,2,1
+push,""" Now push hard "" , said the doctor to the woman .",2,0
+precipitate,The crisis precipitated by Russia 's revolution .,2,1
+heap,heap firewood around the fireplace .,0,0
+kick,The boy kicked the dog .,2,0
+emerge,Some nice results emerged from the study .,3,1
+fuel,The tanker fueled in Bahrain .,2,0
+besiege,The press photographers besieged the movie star .,3,1
+lay,lay the books on the table .,0,0
